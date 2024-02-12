@@ -1,0 +1,71 @@
+cd /etc/bind/
+nano ns1.defco.or.ke.lan
+
+$TTL 3600
+@       IN      SOA     ns1.defco.or.ke. musyokij.defco.or.ke. (
+        2023100301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        3600       ;Minimum TTL
+)
+
+; nameservers
+@       IN      NS      ns1.defco.or.ke.
+
+; name server A record
+ns1  IN      A       131.10.5.91
+
+
+
+
+nano defco.or.ke.lan
+
+$TTL 3600
+@       IN      SOA     ns1.defco.or.ke. musyokij.defco.or.ke. (
+        2023100301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        3600       ;Minimum TTL
+)
+
+; nameservers
+@       IN      NS      ns1.defco.or.ke.
+
+; name server A record
+
+ns1  IN      A       131.10.5.91
+
+; hosts A records
+;www          IN      A       131.10.5.xx
+;@              IN      A       131.10.5.xx
+mail         IN      A       131.10.5.239
+defcoapp1       IN      A       131.10.5.4
+defcoapp2       IN      A       131.10.5.10
+defcoadsrv      IN      A       131.10.5.100
+
+
+
+nano 5.10.131.db
+
+$TTL 86400
+@       IN      SOA     ns1.defco.or.ke. musyokij.defco.or.ke. (
+        2023100301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        86400       ;Minimum TTL
+)
+
+; nameservers
+@       IN      NS      ns1.defco.or.ke.
+
+; reverse lookup for name server
+131.10.5.91    IN      PTR     ns1.defco.or.ke.
+
+; hosts PTR records
+131.10.5.239    IN      PTR     mail.defco.or.ke.
+;131.10.5.xx      IN      PTR     defco.or.ke.
+;131.10.5.xx      IN      PTR     www.defco.or.ke.
+
