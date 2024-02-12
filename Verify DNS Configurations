@@ -1,0 +1,18 @@
+//Verify
+sudo systemctl enable named
+sudo systemctl restart named
+sudo named-checkconf
+sudo named-checkzone dzitu.com.lan /etc/bind/dzitu.com.lan 
+sudo named-checkzone dzitu.db /etc/bind/dzitu.db
+sudo named-checkzone dzitu.com.wan /etc/bind/dzitu.com.wan
+sudo named-checkzone ns1.dzitu.com.lan /etc/bind/ns1.dzitu.com.lan
+sudo named-checkzone ns1.dzitu.com.wan /etc/bind/ns1.dzitu.com.wan
+sudo named-checkzone pub-ip.db.wan /etc/bind/pub-ip.db.wan
+
+
+//Verify
+dig ns1.dzitu.com
+dig -x xxx.xx.xx.x1
+
+dig ns1.dzzitu.com
+dig -x yyy.yy.yy.y1
