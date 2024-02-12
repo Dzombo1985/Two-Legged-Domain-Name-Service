@@ -1,4 +1,4 @@
-**Install Bind9**
+#Install Bind9
 sudo apt install bind9 bind9utils bind9-doc
 
 **Open firewall ports**
