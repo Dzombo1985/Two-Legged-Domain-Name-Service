@@ -1,1 +1,40 @@
+For internal view configuration
 
+cd /etc/bind/
+nano named.conf.local
+
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+view "internal" {
+        match-clients {
+                localhost;
+                internal-network;
+        };
+
+        # forward database
+        zone "ns1.dzitu.com" IN {
+                type master;
+                file "/etc/bind/ns1.dzitu.com.lan";
+                allow-update { none; };
+        };
+
+
+        zone "dzitu.com" IN {
+                type master;
+                file "/etc/bind/dzitu.com.lan";
+                allow-update { none; };
+        };
+
+        # reverse database
+        zone "dzitu.in-addr.arpa" IN {
+                type master;
+                file "/etc/bind/dzitu.db";
+                allow-update { none; };
+        };
+};
