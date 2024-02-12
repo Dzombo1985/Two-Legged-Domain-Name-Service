@@ -1,1 +1,31 @@
+//External view for external resolution
+
+# for external queries
+
+view "external" {
+        match-clients { any; };
+        allow-query { any; };
+        recursion no;
+
+        # forward database for external networks
+        zone "ns1.dzitu.com" IN {
+                type master;
+                file "/etc/bind/ns1.dzitu.com.wan";
+                allow-update { none; };
+        };
+
+        zone "dzitu.com" IN {
+                type master;
+                file "/etc/bind/dzitu.com.wan";
+                allow-update { none; };
+        };
+
+        # reverse database for external networks
+        zone "dzitu.wan.in-addr.arpa" IN {
+                type master;
+                file "/etc/bind/pub-ip.db.wan";
+                allow-update { none; };
+        };
+
+};
 
