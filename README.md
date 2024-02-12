@@ -1,4 +1,4 @@
-# Configuring a Two-Legged-Domain-Name-Service Server
+# Two-Legged-Domain-Name-Service Server
 **DNS Configuration for internal (private) &amp; external (public) resolution using views**
 
 What is DNS?
