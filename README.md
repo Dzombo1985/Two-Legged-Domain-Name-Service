@@ -25,3 +25,18 @@ DNS resolution can be classified into two main categories: internal (or private)
    - External DNS servers, often provided by internet service providers (ISPs) or public DNS providers like Google DNS or Cloudflare DNS, handle requests for domain names outside of the local network.
 
 In summary, internal DNS resolution handles domain names within a private network, while external DNS resolution deals with domain names accessible from the public internet. Both types of resolution are essential for efficient and secure communication within and outside of an organization's network infrastructure.
+
+# DNS Views
+DNS views are a feature of some DNS server software that allow different responses to be provided for the same query based on predefined criteria. This feature is particularly useful in scenarios where the DNS server needs to serve different sets of clients or provide different responses based on the source of the DNS query.
+
+Here's how DNS views work:
+
+1. **Client-Specific Responses**: DNS views enable the server to provide different responses to DNS queries from different clients or networks. For example, a DNS server could be configured to provide different IP addresses for the same domain name depending on whether the query comes from an internal network or the public internet.
+
+2. **Geographical Responses**: DNS views can also be used to provide different responses based on the geographical location of the client making the DNS query. This is often used to direct users to the closest or most appropriate server based on their location, improving performance and user experience.
+
+3. **Split DNS**: Another common use case for DNS views is split DNS, where different sets of DNS records are served to internal and external clients. This allows organizations to provide different access policies or resources to internal users compared to external users.
+
+4. **Conditional Responses**: DNS views can be configured to provide conditional responses based on various criteria such as time of day, network conditions, or specific attributes of the DNS query.
+
+DNS views are typically implemented in DNS server software such as BIND (Berkeley Internet Name Domain) and can be configured using specific syntax or configuration options provided by the DNS server software. Properly configuring DNS views can help organizations optimize their DNS infrastructure for performance, security, and compliance with specific requirements.
