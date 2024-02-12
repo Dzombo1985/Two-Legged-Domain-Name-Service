@@ -26,7 +26,7 @@ OPTIONS="-u bind -4"
 // Create an access list for your internal network(s) and add other settings (allow-query, allow-transfer, recursion, dnssec-validation and  listen-on-v6 ) as shown below;
 cd /etc/bind/
 nano named.conf.options
-
+//Add
 acl internal-network {
         xxx.xx.xx.xx/xx;
 };
