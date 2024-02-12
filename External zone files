@@ -1,0 +1,60 @@
+//Create external zone files
+
+nano dzitu.com.wan
+
+$TTL 3600
+@       IN      SOA     ns1.dzitu.com. admin@dzitu.com. (
+        2023100301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        3600       ;Minimum TTL
+)
+
+; nameservers
+@       IN      NS      ns1.dzitu.com.
+
+; name server A record
+
+ns1  IN      A       yyy.yy.yy.y1
+
+; hosts A records
+www          IN      A       yyy.yy.yy.y2
+@              IN      A       yyy.yy.yy.y2
+mail         IN      A       yyy.yy.yy.y3
+
+
+; hosts MX records
+dzitu.com.      IN      MX      10      mail.dzitu.com.
+
+; TXT records
+; SPF
+--- SPF record here ---
+
+;DMARC for Dzitu
+--- DMARC record here ---
+
+;DMKIM for Dzitu mail
+--- DKIM record here ---
+
+
+nano dzitu.com.wan
+
+$TTL 3600
+@       IN      SOA      ns1.dzitu.com. admin@dzitu.com. (
+        2023100301  ;Serial
+        3600        ;Refresh
+        1800        ;Retry
+        604800      ;Expire
+        3600       ;Minimum TTL
+)
+
+; nameservers
+@       IN      NS      ns1.dzitu.com.
+
+; PTR records
+yyy.yy.yy.y1  IN      PTR     ns1.dzitu.com.
+
+yyy.yy.yy.y2   IN      PTR     mail.dzitu.com.
+yyy.yy.yy.y3  IN      PTR     www.dzitu.com.
+yyy.yy.yy.y3  IN      PTR     dzitu.com.
