@@ -1,3 +1,6 @@
+//Install latest Ubuntu Server and update and/or upgrade
+apt-get update && apt-get upgrade
+
 //Install Bind9
 sudo apt install bind9 bind9utils bind9-doc
 
