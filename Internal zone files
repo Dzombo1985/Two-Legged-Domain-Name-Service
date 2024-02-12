@@ -43,9 +43,7 @@ www          IN      A       xxx.xx.xx.x2
 mail         IN      A       xxx.xx.xx.x3
 
 
-
-
-nano dzitu.com.db
+nano dzitu.db
 
 $TTL 86400
 @       IN      SOA     ns1.dzitu.com. admin@dzitu.com. (
