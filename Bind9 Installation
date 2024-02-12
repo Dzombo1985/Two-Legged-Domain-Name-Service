@@ -1,22 +1,21 @@
-#Install Bind9
+//Install Bind9
 sudo apt install bind9 bind9utils bind9-doc
 
-**Open firewall ports**
+//Open firewall ports
 ufw allow 22/tcp
 ufw allow 53/tcp
 ufw allow 53/udp
 ufw enable
 ufw reload
 
+//Disable default zones
 nano name.conf
-
 include "/etc/bind/named.conf.options";
 include "/etc/bind/named.conf.local";
 #include "/etc/bind/named.conf.default-zones";
 
-
+//For IPv4 usage, add bind -4 as shown below;
 nano /etc/default/named
-
 #
 # run resolvconf?
 RESOLVCONF=no
@@ -24,11 +23,12 @@ RESOLVCONF=no
 # startup options for the server
 OPTIONS="-u bind -4"
 
+// Create an access list for your internal network(s) and add other settings as shown below;
 cd /etc/bind/
 nano named.conf.options
 
 acl internal-network {
-        131.10.0.0/16;
+        xxx.xx.xx.xx/xx;
 };
 
 options {
