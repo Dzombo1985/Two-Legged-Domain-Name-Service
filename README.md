@@ -1,5 +1,5 @@
 # Configuring a Two-Legged-Domain-Name-Service Server
-DNS Configuration for internal (private) &amp; external (public) resolution using views
+**DNS Configuration for internal (private) &amp; external (public) resolution using views**
 
 What is DNS?
 DNS stands for Domain Name System. It is a hierarchical decentralized naming system for computers, services, or any resource connected to the Internet or a private network. DNS translates domain names, which are easy-to-remember labels for websites, into the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.
