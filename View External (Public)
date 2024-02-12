@@ -23,7 +23,7 @@ view "external" {
         # reverse database for external networks
         zone "dzitu.wan.in-addr.arpa" IN {
                 type master;
-                file "/etc/bind/pub-ip.db.wan";
+                file "/etc/bind/pub.dzitu.com.wan";
                 allow-update { none; };
         };
 
