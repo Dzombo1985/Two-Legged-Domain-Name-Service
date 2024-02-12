@@ -26,7 +26,7 @@ DNS resolution can be classified into two main categories: internal (or private)
 
 In summary, internal DNS resolution handles domain names within a private network, while external DNS resolution deals with domain names accessible from the public internet. Both types of resolution are essential for efficient and secure communication within and outside of an organization's network infrastructure.
 
-# DNS Views
+# DNS views
 DNS views are a feature of some DNS server software that allow different responses to be provided for the same query based on predefined criteria. This feature is particularly useful in scenarios where the DNS server needs to serve different sets of clients or provide different responses based on the source of the DNS query.
 
 Here's how DNS views work:
