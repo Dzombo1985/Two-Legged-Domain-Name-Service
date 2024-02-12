@@ -38,7 +38,7 @@ dzitu.com.      IN      MX      10      mail.dzitu.com.
 --- DKIM record here ---
 
 
-nano dzitu.com.wan
+nano pub.dzitu.com.wan
 
 $TTL 3600
 @       IN      SOA      ns1.dzitu.com. admin@dzitu.com. (
